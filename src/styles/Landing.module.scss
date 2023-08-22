@@ -1,0 +1,51 @@
+@import "./config.scss";
+
+.landing {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    @include flex(center, center, auto);
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+    .content {
+        position: relative;
+        span {
+            display: block;
+            text-align: center;
+            color: $pink-900;
+            &.heading {
+                font-size: 70px;
+                font-weight: bold;
+                color: $pink-950;
+            }
+            &.sub {
+                text-transform: uppercase;
+            }
+        }
+        .action {
+            text-align: center;
+            button {
+                color: $pink-100;
+                background: $pink-900;
+            }
+        }
+    }
+    &::before {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($pink-400, 0.3);
+        z-index: -1;
+    }
+}

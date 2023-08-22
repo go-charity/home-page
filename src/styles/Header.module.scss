@@ -1,0 +1,65 @@
+@import "./config.scss";
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 2rem;
+    z-index: 99;
+    @include flex(center, space-between, 10px);
+    .logo-container {
+        @include flex(center, center, 10px);
+        img {
+            width: 70px;
+            height: auto;
+        }
+        span {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: $pink-900;
+        }
+    }
+    nav.menu {
+        @include flex(center, center, 0px);
+        a {
+            padding: 10px 1rem;
+            position: relative;
+            color: $pink-900;
+            @include flex(center, center, auto);
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 3px;
+                background-color: $pink-900;
+                transition: 200ms;
+                bottom: 0;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .action {
+        button {
+            border-color: $pink-900;
+            color: $pink-900;
+        }
+    }
+    &.top {
+        position: fixed;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 95%;
+            height: 2px;
+            background-color: rgba($pink-900, 0.2);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "./config.scss";
+
+.content-page {
+    @include flex(center, center, 3rem);
+    min-height: 700px;
+    position: relative;
+    background-color: $pink-300;
+    z-index: -1;
+    .left {
+        max-width: 600px;
+        .heading {
+            span {
+                display: block;
+                &.big {
+                    font-weight: bold;
+                    font-size: 50px;
+                    color: $pink-900;
+                }
+            }
+        }
+        .content {
+            color: white;
+        }
+    }
+    .right {
+        position: relative;
+        img {
+            height: 500px;
+            width: 600px;
+            object-fit: cover;
+            position: relative;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 500px;
+            background-color: $pink-900;
+            right: -3rem;
+            bottom: -3rem;
+            z-index: -1;
+        }
+    }
+    &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+        background-color: $pink-900;
+        .left {
+            .heading span.big {
+                color: $pink-200;
+            }
+            .content {
+                color: white;
+            }
+        }
+        .right {
+            &::before {
+                right: unset;
+                left: -3rem;
+                background-color: $pink-200;
+            }
+        }
+    }
+}
