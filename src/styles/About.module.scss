@@ -109,6 +109,7 @@
     }
     @include media-h(max, 765px) {
         height: auto;
-        padding: 2rem inherit;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
