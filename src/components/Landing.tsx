@@ -1,6 +1,6 @@
 import React from "react";
 import css from "@/styles/Landing.module.scss";
-import bgImg from "@/assets/images/charity-bg.jpg";
+import bgImg from "@/assets/images/charity-bg.png";
 import { Button } from "@mui/material";
 
 const Landing = () => {

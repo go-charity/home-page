@@ -48,4 +48,21 @@
         background-color: rgba($pink-400, 0.3);
         z-index: -1;
     }
+
+    @include media(max, 970px) {
+        .content span.heading {
+            font-size: 50px;
+        }
+    }
+    @include media(max, 670px) {
+        .content span.heading {
+            font-size: 40px;
+            padding: 0px 1rem;
+        }
+    }
+    @include media(max, 300px) {
+        .content span.heading {
+            font-size: 30px;
+        }
+    }
 }

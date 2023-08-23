@@ -87,11 +87,6 @@
                 .input {
                     width: 100%;
                 }
-                .textarea {
-                    // * {
-                    //     height: 500px;
-                    // }
-                }
                 .action {
                     width: 100%;
                     text-align: right;
@@ -103,6 +98,67 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    @include media(max, 1120px) {
+        .inner-container {
+            .left,
+            .right {
+                width: auto;
+            }
+            .right {
+                form {
+                    width: 400px;
+                }
+            }
+        }
+    }
+    @include media(max, 850px) {
+        height: auto;
+        padding: 2rem;
+        .map,
+        .overlay {
+            height: 100%;
+        }
+        .inner-container {
+            flex-direction: column;
+        }
+    }
+    @include media(max, 485px) {
+        .inner-container {
+            padding: 1rem;
+            .right form {
+                width: 300px;
+            }
+        }
+    }
+    @include media(max, 375px) {
+        .inner-container {
+            padding: 1rem 7px;
+            min-width: 300px;
+            // width: 100%;
+            .left {
+                .heading {
+                    font-size: 35px;
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                }
+                .social-container {
+                    gap: 5px;
+                    justify-content: center;
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        i {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+            .right form {
+                width: 250px;
             }
         }
     }
