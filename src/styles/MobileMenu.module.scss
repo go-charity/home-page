@@ -1,0 +1,35 @@
+@import "./config.scss";
+
+.mobile-menu {
+    @include flex(center, start, 1rem, column);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgba($pink-950, 0.8);
+    & > * {
+        width: 100%;
+    }
+    .cancel {
+        text-align: right;
+        i {
+            font-size: 24px;
+            color: $pink-200;
+        }
+    }
+    a {
+        display: block;
+        color: $pink-200;
+        text-align: center;
+    }
+    .action {
+        text-align: center;
+        button {
+            color: $pink-200;
+            border-color: $pink-200;
+        }
+    }
+}

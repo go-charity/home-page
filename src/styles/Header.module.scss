@@ -49,6 +49,9 @@
             color: $pink-900;
         }
     }
+    .hamburger {
+        display: none;
+    }
     &.top {
         position: fixed;
         &::before {
@@ -60,6 +63,19 @@
             background-color: rgba($pink-900, 0.2);
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+    @include media(max, 730px) {
+        nav.menu,
+        .action {
+            display: none;
+        }
+        .hamburger {
+            display: block;
+            i {
+                font-size: 24px;
+                color: $pink-900;
+            }
         }
     }
 }

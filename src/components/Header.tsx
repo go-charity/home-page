@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import css from "@/styles/Header.module.scss";
 import logo from "@/assets/images/logo.png";
 import { Button } from "@mui/material";
+import { MobileMenuContext } from "@/contexts/MobileMenuContext";
 
 const Header = () => {
+  const mobileMenuContext = useContext(MobileMenuContext);
+
   return (
     <div className={`${css.header} ${css.top}`}>
       <a href="/" className={css["logo-container"]}>
@@ -18,6 +21,9 @@ const Header = () => {
       </nav>
       <div className={css.action}>
         <Button variant="outlined">Donate now!</Button>
+      </div>
+      <div className={css.hamburger} onClick={() => mobileMenuContext.show()}>
+        <i className="fas fa-bars-staggered"></i>
       </div>
     </div>
   );
