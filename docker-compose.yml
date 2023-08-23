@@ -1,0 +1,10 @@
+---
+version: '3.8'
+services:
+  go-charity-homepage:
+    build: .
+    container_name: go-charity-homepage
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 3002:3002
