@@ -5,7 +5,7 @@ import React, { useContext, useMemo } from "react";
 import css from "@/styles/MobileMenu.module.scss";
 import { Button } from "@mui/material";
 
-const MobileMenu = () => {
+const MobileMenu: React.FC = () => {
   const mobileMenuContext = useContext(MobileMenuContext);
   const variants = useMemo<Variants>(
     () => ({

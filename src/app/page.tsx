@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <MobileMenuContextProvider>
         <MobileMenu />
+        <Header />
         <main className="app">
-          <Header />
           <Landing />
           <About />
           {Array.from(data.contents).map((content, i) => (
