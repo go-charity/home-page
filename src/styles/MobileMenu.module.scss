@@ -27,9 +27,16 @@
     }
     .action {
         text-align: center;
+        @include flex(center, start, 1rem, column);
         button {
             color: $pink-200;
             border-color: $pink-200;
+        }
+        a {
+            button {
+                color: $pink-900;
+                background-color: $pink-200;
+            }
         }
     }
 }

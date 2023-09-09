@@ -43,6 +43,12 @@ const MobileMenu: React.FC = () => {
               <a href="/#contact">Contact</a>
               <div className={css.action}>
                 <Button variant="outlined">Donate now!</Button>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_AUTH_DOMAIN}`}
+                  target="_blank"
+                >
+                  <Button variant="contained">JOIN US!</Button>
+                </a>
               </div>
             </motion.nav>
           </>

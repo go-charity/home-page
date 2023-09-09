@@ -13,9 +13,9 @@ const Landing = () => {
         <span className={css.sub}>Fund donation for poor children</span>
         <br />
         <div className={css.action}>
-          <a href="#about">
+          <a href={`${process.env.NEXT_PUBLIC_AUTH_DOMAIN}`} target="_blank">
             <Button variant="contained" size="large">
-              LEARN MORE!
+              JOIN US!
             </Button>
           </a>
         </div>

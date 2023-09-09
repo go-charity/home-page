@@ -1,7 +1,7 @@
 import "@/styles/global.scss";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import icon from "@/assets/images/logo.png";
+import icon from "@/app/favicon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -12,7 +12,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "GO.Charity",
   description: `Welcome to GO.Charity, a crowdfunding platform with a profound purpose. GO.Charity is a pioneering initiative based in Nigeria that's rewriting the rules of crowdfunding. Our commitment goes beyond fundraising; we exist to amplify the voices of less privileged children, particularly those in orphanages.`,
-  // icons: { icon: icon.src },
+  icons: { icon: icon.src },
 };
 
 export default function RootLayout({
@@ -30,7 +30,6 @@ export default function RootLayout({
           {...{ crossorigin: "anonymous" }}
           {...{ referrerpolicy: "no-referrer" }}
         />
-        <link rel="icon" href={icon.src} type="image/png" />
       </head>
       <body className={poppins.className}>{children}</body>
     </html>

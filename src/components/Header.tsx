@@ -52,6 +52,7 @@ const Header = () => {
       </nav>
       <div className={css.action}>
         <Button variant="outlined">Donate now!</Button>
+        <a href={`${process.env.NEXT_PUBLIC_AUTH_DOMAIN}`}>JOIN US!</a>
       </div>
       <div className={css.hamburger} onClick={() => mobileMenuContext.show()}>
         <i className="fas fa-bars-staggered"></i>

@@ -44,9 +44,14 @@
         }
     }
     .action {
+        @include flex(center, start, 1rem);
         button {
             border-color: $pink-900;
             color: $pink-900;
+        }
+        a {
+            color: $pink-900;
+            font-size: 15px !important;
         }
     }
     .hamburger {
