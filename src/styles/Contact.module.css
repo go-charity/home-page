@@ -1,0 +1,185 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+}
+.contact .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+.contact .overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(254, 110, 139, 0.2), rgba(138, 17, 60, 0.3));
+}
+.contact .inner-container {
+  padding: 2rem;
+  border-radius: 5px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact .inner-container .left {
+  width: 500px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  flex-direction: column;
+}
+.contact .inner-container .left .heading {
+  font-size: 50px;
+  width: 100%;
+}
+.contact .inner-container .left .social-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  width: 100%;
+}
+.contact .inner-container .left .social-container a {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  background-color: transparent;
+  transition: 200ms;
+  border-radius: 50%;
+}
+.contact .inner-container .left .social-container a i {
+  font-size: 35px;
+  color: #8a113c;
+  transition: 200ms;
+}
+.contact .inner-container .left .social-container a:hover {
+  background-color: #8a113c;
+}
+.contact .inner-container .left .social-container a:hover i {
+  color: #ffe3e7;
+}
+.contact .inner-container .left .external-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.contact .inner-container .left .external-links li {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1.5rem;
+}
+.contact .inner-container .left .external-links li i {
+  font-size: 30px;
+  color: #8a113c;
+}
+.contact .inner-container .left .external-links li .content-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+  flex-direction: column;
+}
+.contact .inner-container .left .external-links li .content-container span {
+  font-size: 24px;
+}
+.contact .inner-container .left .external-links li .content-container a {
+  color: #8a113c;
+}
+.contact .inner-container .right {
+  width: 500px;
+}
+.contact .inner-container .right form {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  flex-direction: column;
+}
+.contact .inner-container .right form .input {
+  width: 100%;
+}
+.contact .inner-container .right form .action {
+  width: 100%;
+  text-align: right;
+}
+.contact .inner-container .right form .action .send {
+  color: #8a113c;
+  border-color: #8a113c;
+}
+.contact .inner-container .right form .action .send:hover {
+  background-color: rgba(255, 241, 243, 0.7);
+}
+@media (max-width: 1120px) {
+  .contact .inner-container .left,
+  .contact .inner-container .right {
+    width: auto;
+  }
+  .contact .inner-container .right form {
+    width: 400px;
+  }
+}
+@media (max-width: 850px) {
+  .contact {
+    height: auto;
+    padding: 2rem;
+  }
+  .contact .map,
+  .contact .overlay {
+    height: 100%;
+  }
+  .contact .inner-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 485px) {
+  .contact .inner-container {
+    padding: 1rem;
+  }
+  .contact .inner-container .right form {
+    width: 300px;
+  }
+}
+@media (max-width: 375px) {
+  .contact .inner-container {
+    padding: 1rem 7px;
+    min-width: 300px;
+  }
+  .contact .inner-container .left .heading {
+    font-size: 35px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  .contact .inner-container .left .social-container {
+    gap: 5px;
+    justify-content: center;
+  }
+  .contact .inner-container .left .social-container a {
+    width: 40px;
+    height: 40px;
+  }
+  .contact .inner-container .left .social-container a i {
+    font-size: 25px;
+  }
+  .contact .inner-container .right form {
+    width: 250px;
+  }
+}/*# sourceMappingURL=Contact.module.css.map */

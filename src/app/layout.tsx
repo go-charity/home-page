@@ -2,6 +2,9 @@ import "@/styles/global.scss";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import icon from "@/app/favicon.ico";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
+import { Hearts } from "react-loader-spinner";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -31,7 +34,26 @@ export default function RootLayout({
           {...{ referrerpolicy: "no-referrer" }}
         />
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Suspense
+          fallback={
+            <div
+              style={{
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "linear-gradient(to bottom, #fff1f3, #ffc0cb)",
+              }}
+            >
+              Loading...
+            </div>
+          }
+        >
+          {children}
+        </Suspense>
+      </body>
     </html>
   );
 }

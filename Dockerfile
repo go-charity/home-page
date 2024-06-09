@@ -1,4 +1,4 @@
-FROM node:gallium
+FROM node:gallium-alpine
 
 WORKDIR /app
 
@@ -8,9 +8,10 @@ RUN npm install -f
 
 COPY . .
 
+ENV NEXT_PUBLIC_AUTH_DOMAIN=https://auth.gocharity.com.ng
+
 RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
-
+CMD ["npx", "next", "start", "-p", "3000"]

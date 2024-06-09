@@ -1,0 +1,69 @@
+.landing {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+}
+.landing .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+.landing .content {
+  position: relative;
+}
+.landing .content span {
+  display: block;
+  text-align: center;
+  color: #8a113c;
+}
+.landing .content span.heading {
+  font-size: 70px;
+  font-weight: bold;
+  color: #4d041c;
+}
+.landing .content span.sub {
+  text-transform: uppercase;
+}
+.landing .content .action {
+  text-align: center;
+}
+.landing .content .action button {
+  color: #ffe3e7;
+  background: #8a113c;
+}
+.landing::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(254, 110, 139, 0.3);
+  z-index: -1;
+}
+@media (max-width: 970px) {
+  .landing .content span.heading {
+    font-size: 50px;
+  }
+}
+@media (max-width: 670px) {
+  .landing .content span.heading {
+    font-size: 40px;
+    padding: 0px 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .landing .content span.heading {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=Landing.module.css.map */

@@ -1,0 +1,17 @@
+WHY SHOULD YOU CONSIDER ME?
+- I'm currently creating a new product for crowdfunding, which enables the less privileged recieve funding from potential donors. Recently implemented the complete auth system. It's a private project, therefore it's repo is private under an organization's account
+  Here is the homepage URL:
+  https://www.gocharity.com.ng/
+  Here is the auth URL:
+  https://auth.gocharity.com.ng/
+- I streamlined application development by 20% in my previous role through GOPack, a product I developed. It simplifies bundling projects into static files using pre-configured webpack, curbing plagiarism and expediting production-ready setups.
+  Here is the GitHub repo:
+  https://github.com/onukwilip/gopack
+  Here is the live URL:
+  https://gopack.vercel.app/
+- Created a real-time global personnel tracking software using MQTT, React Js, Node Js, and Google Maps API, yielding approximately 10% revenue increase for the organization.
+  Here is the GitHub repo:
+  https://github.com/onukwilip/NigTrak/tree/adding-typescript
+  Here is the live URL:
+  https://nigtrak.netlify.app/
+- Boosted customer turnout by 15% in my previous organization through a payment web app enabling easy energy/power payments using technologies like PayStack, Remita, and React Js.
