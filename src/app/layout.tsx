@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import icon from "@/app/favicon.ico";
 import { Suspense } from "react";
-import Loader from "@/components/Loader";
-import { Hearts } from "react-loader-spinner";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -52,6 +51,7 @@ export default function RootLayout({
           }
         >
           {children}
+          <NextTopLoader color="#fe6e8b" />
         </Suspense>
       </body>
     </html>
