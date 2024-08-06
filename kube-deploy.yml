@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homepage-deployment
+  labels:
+    obj: deployment
+    app: homepage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      obj: pod
+      app: homepage
+  template:
+    metadata:
+      obj: pod
+      app: homepage
+    spec:
+      containers:
+      - name: homepage-container
+        image: gocharity/homepage:latest
+        resources:
+          requests:
+            cpu: 150m
+            memory: 10Mi
+          limits:
+            cpu: 250m
+            memory: 20Mi
+        env:
+        - name: NEXT_PUBLIC_AUTH_DOMAIN
+          valueFrom:
+            configMapKeyRef:
+              name: gocharity-config-map
+              key: AUTH_CLIENT_HOST
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homepage-service
+  labels:
+    obj: service
+    app: homepage
+spec:
+  selector:
+    obj: pod
+    app: homepage
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+  type: LoadBalancer
+
+
