@@ -33,7 +33,7 @@ jobs:
           docker push ${{env.IMAGE}}:${{github.sha}}
 
       - name: Set up the GKE Cluster credentials
-        uses: google-github-actions/get-gke-credentials@v0
+        uses: google-github-actions/get-gke-credentials@v2
         with:
           cluster_name: ${{ env.GKE_CLUSTER }}
           location: ${{ env.GKE_ZONE }}
